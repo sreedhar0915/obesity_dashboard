@@ -84,11 +84,14 @@ class _LifestyleFactorCardState extends State<LifestylebehaviorCard> {
           sizedBoxWithHeight(6),
           Row(
             children: [
-              Text(widget.value,
-                  style: GoogleFonts.roboto(
-                      color: AppColors.black,
-                      fontSize: 18.sp,
-                      fontWeight: FontWeight.w600)),
+              Expanded(
+                child: Text(widget.value,
+                    maxLines: 3,
+                    style: GoogleFonts.roboto(
+                        color: AppColors.black,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w600)),
+              ),
               const Spacer(),
               Image.asset(widget.statusimage, height: 16.h, width: 16.w),
               sizedBoxWithWidth(4),
